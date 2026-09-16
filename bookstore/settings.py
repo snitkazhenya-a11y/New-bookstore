@@ -44,7 +44,9 @@ INSTALLED_APPS = [
     'accounts'
 ]
 
-INSTALLED_APPS += ['debug_toolbar']
+INSTALLED_APPS += ['debug_toolbar',
+    'blog.apps.BlogConfig',
+]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
