@@ -5,7 +5,6 @@
 {% block content %}
 <h1 class="mb-4">Каталог книг</h1>
 
-<!-- Фільтри та пошук -->
 <form method="get" class="row g-3 mb-4">
     <div class="col-md-5">
         <input type="text" name="q" class="form-control" placeholder="Пошук за назвою..." value="{{ search_query }}">
@@ -25,11 +24,14 @@
     </div>
 </form>
 
-<!-- Список книг (Cards) -->
 <div class="row">
     {% for book in books %}
         <div class="col-md-4 mb-4">
             <div class="card h-100 shadow-sm">
+                {% if book.image %}
+                    <img src="{{ book.image.url }}" class="card-img-top" alt="{{ book.title }}" style="height: 150px; object-fit: cover;">
+                {% endif %}
+
                 <div class="card-body">
                     <span class="badge bg-secondary mb-2">{{ book.category.name }}</span>
                     <h5 class="card-title">{{ book.title }}</h5>
@@ -50,7 +52,6 @@
     {% endfor %}
 </div>
 
-<!-- Пагінація -->
 {% if is_paginated %}
 <nav class="mt-4">
     <ul class="pagination justify-content-center">
