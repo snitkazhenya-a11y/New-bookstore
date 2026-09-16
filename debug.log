@@ -1532,3 +1532,24 @@ Watching for file changes with StatReloader
 "GET /admin/ HTTP/1.1" 200 42674
 "GET /books/5/ HTTP/1.1" 200 32015
 "GET /books/ HTTP/1.1" 200 36489
+"GET /books/ HTTP/1.1" 200 36760
+"GET /media/books/a429ba6d-d83f-11ec-8170-0050568ef5e6_9a56af6f-d841-11ec-8170-0050568ef5e6_1.webp HTTP/1.1" 200 78878
+"GET /books/ HTTP/1.1" 200 36760
+"GET /admin/ HTTP/1.1" 200 42673
+"GET /admin/catalog/book/ HTTP/1.1" 200 49024
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+D:\Project\bookstore\catalog\admin.py changed, reloading.
+D:\Project\bookstore\catalog\admin.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET /admin/catalog/book/ HTTP/1.1" 200 49025
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/catalog/book/ HTTP/1.1" 200 49024
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/ HTTP/1.1" 200 42673
+"GET /admin/blog/post/ HTTP/1.1" 200 40900
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /books/ HTTP/1.1" 200 36760
+"GET /media/books/a429ba6d-d83f-11ec-8170-0050568ef5e6_9a56af6f-d841-11ec-8170-0050568ef5e6_1.webp HTTP/1.1" 304 0
+D:\Project\bookstore\bookstore\settings.py changed, reloading.
+D:\Project\bookstore\bookstore\settings.py changed, reloading.
