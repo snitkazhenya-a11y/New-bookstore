@@ -1424,3 +1424,82 @@ Watching for file changes with StatReloader
 "GET /admin/accounts/customuser/2/change/ HTTP/1.1" 200 56028
 "GET /admin/accounts/customuser/ HTTP/1.1" 200 44624
 "GET /admin/ HTTP/1.1" 200 40036
+"GET /admin/catalog/book/add/ HTTP/1.1" 200 44663
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/catalog/category/add/?_to_field=id&_popup=1 HTTP/1.1" 200 39125
+"GET /static/admin/js/inlines.js HTTP/1.1" 200 15628
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /static/admin/img/inline-delete.svg HTTP/1.1" 200 651
+"POST /admin/catalog/category/add/?_to_field=id&_popup=1 HTTP/1.1" 200 29789
+"GET /static/admin/js/popup_response.js HTTP/1.1" 200 532
+"POST /admin/catalog/book/add/ HTTP/1.1" 302 0
+"GET /admin/catalog/book/ HTTP/1.1" 200 44535
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"POST /admin/catalog/book/ HTTP/1.1" 302 0
+"GET /admin/catalog/book/ HTTP/1.1" 200 44284
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/catalog/ HTTP/1.1" 200 35391
+"GET /admin/ HTTP/1.1" 200 40798
+"GET /admin/catalog/book/add/ HTTP/1.1" 200 44706
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"POST /admin/catalog/book/add/ HTTP/1.1" 302 0
+"GET /admin/catalog/book/ HTTP/1.1" 200 45411
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/catalog/book/add/ HTTP/1.1" 200 44706
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"POST /admin/catalog/book/add/ HTTP/1.1" 200 46068
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"POST /admin/catalog/book/add/ HTTP/1.1" 302 0
+"GET /admin/catalog/book/ HTTP/1.1" 200 46476
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/ HTTP/1.1" 200 41654
+"GET /admin/catalog/ HTTP/1.1" 200 35391
+"GET /admin/ HTTP/1.1" 200 41654
+"GET /admin/catalog/book/ HTTP/1.1" 200 46164
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/catalog/book/add/ HTTP/1.1" 200 44706
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/catalog/category/add/?_to_field=id&_popup=1 HTTP/1.1" 200 39125
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"POST /admin/catalog/category/add/?_to_field=id&_popup=1 HTTP/1.1" 200 29831
+"POST /admin/catalog/book/add/ HTTP/1.1" 302 0
+"GET /admin/catalog/book/ HTTP/1.1" 200 47634
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/catalog/book/add/ HTTP/1.1" 200 44763
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"POST /admin/catalog/book/add/ HTTP/1.1" 302 0
+"GET /admin/catalog/book/ HTTP/1.1" 200 48560
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+D:\Project\bookstore\catalog\models.py changed, reloading.
+D:\Project\bookstore\catalog\models.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+D:\Project\bookstore\catalog\models.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Project\bookstore\catalog\models.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Project\bookstore\catalog\models.py changed, reloading.
+D:\Project\bookstore\catalog\models.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+D:\Project\bookstore\catalog\models.py changed, reloading.
+D:\Project\bookstore\catalog\models.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+D:\Project\bookstore\bookstore\settings.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /admin/catalog/book/ HTTP/1.1" 200 48291
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/ HTTP/1.1" 200 42486
+"GET /admin/accounts/customuser/ HTTP/1.1" 200 44624
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/ HTTP/1.1" 200 42486
+"GET /admin/catalog/book/ HTTP/1.1" 200 48290
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/catalog/book/5/change/ HTTP/1.1" 200 47439
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"POST /admin/catalog/book/5/change/ HTTP/1.1" 302 0
+"GET /admin/catalog/book/ HTTP/1.1" 200 48562
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+D:\Project\bookstore\catalog\admin.py changed, reloading.
+Watching for file changes with StatReloader
