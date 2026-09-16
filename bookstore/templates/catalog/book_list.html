@@ -1,0 +1,76 @@
+{% extends 'catalog/base.html' %}
+
+{% block title %}Каталог книг{% endblock %}
+
+{% block content %}
+<h1 class="mb-4">Каталог книг</h1>
+
+<!-- Фільтри та пошук -->
+<form method="get" class="row g-3 mb-4">
+    <div class="col-md-5">
+        <input type="text" name="q" class="form-control" placeholder="Пошук за назвою..." value="{{ search_query }}">
+    </div>
+    <div class="col-md-4">
+        <select name="category" class="form-select">
+            <option value="">Усі категорії</option>
+            {% for cat in categories %}
+                <option value="{{ cat.id }}" {% if selected_category == cat.id|stringformat:"s" %}selected{% endif %}>
+                    {{ cat.name }}
+                </option>
+            {% endfor %}
+        </select>
+    </div>
+    <div class="col-md-3">
+        <button type="submit" class="btn btn-outline-primary w-100">Застосувати</button>
+    </div>
+</form>
+
+<!-- Список книг (Cards) -->
+<div class="row">
+    {% for book in books %}
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body">
+                    <span class="badge bg-secondary mb-2">{{ book.category.name }}</span>
+                    <h5 class="card-title">{{ book.title }}</h5>
+                    <p class="card-text text-muted">Автор: {{ book.author }}</p>
+                    <p class="fw-bold text-success">{{ book.price }} грн</p>
+                </div>
+                <div class="card-footer bg-white border-0 d-flex justify-content-between">
+                    <a href="{% url 'catalog:book_detail' book.pk %}" class="btn btn-info btn-sm text-white">Переглянути</a>
+                    <div>
+                        <a href="{% url 'catalog:book_update' book.pk %}" class="btn btn-warning btn-sm">Редагувати</a>
+                        <a href="{% url 'catalog:book_delete' book.pk %}" class="btn btn-danger btn-sm">Видалити</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% empty %}
+        <p class="text-muted">Книг не знайдено.</p>
+    {% endfor %}
+</div>
+
+<!-- Пагінація -->
+{% if is_paginated %}
+<nav class="mt-4">
+    <ul class="pagination justify-content-center">
+        {% if page_obj.has_previous %}
+            <li class="page-item">
+                <a class="page-link" href="?page={{ page_obj.previous_page_number }}&q={{ search_query }}&category={{ selected_category }}">Назад</a>
+            </li>
+        {% endif %}
+        
+        <li class="page-item active">
+            <span class="page-link">{{ page_obj.number }} з {{ page_obj.paginator.num_pages }}</span>
+        </li>
+
+        {% if page_obj.has_next %}
+            <li class="page-item">
+                <a class="page-link" href="?page={{ page_obj.next_page_number }}&q={{ search_query }}&category={{ selected_category }}">Вперед</a>
+            </li>
+        {% endif %}
+    </ul>
+</nav>
+{% endif %}
+
+{% endblock %}

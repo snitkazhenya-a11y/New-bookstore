@@ -1,0 +1,21 @@
+{% extends "catalog/base.html" %}
+
+{% block title %}{{ book.title }}{% endblock %}
+
+{% block content %}
+<div class="card shadow p-4">
+    <div class="card-body">
+        <span class="badge bg-primary mb-2">{{ book.category.name }}</span>
+        <h2>{{ book.title }}</h2>
+        <p class="text-muted">Автор: <strong>{{ book.author }}</strong></p>
+        <hr>
+        <p>{{ book.description|default:"Опис відсутній." }}</p>
+        <h4 class="text-success mb-3">{{ book.price }} грн</h4>
+        <p>В наявності: {{ book.stock }} шт.</p>
+        
+        <a href="{% url 'catalog:book_list' %}" class="btn btn-secondary">← Назад до списку</a>
+        <a href="{% url 'catalog:book_update' book.pk %}" class="btn btn-warning">Редагувати</a>
+        <a href="{% url 'catalog:book_delete' book.pk %}" class="btn btn-danger">Видалити</a>
+    </div>
+</div>
+{% endblock %}

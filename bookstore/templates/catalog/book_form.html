@@ -1,0 +1,21 @@
+{% extends "catalog/base.html" %}
+
+{% block title %}{% if object %}Редагування{% else %}Створення{% endif %} книги{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <div class="card shadow p-4">
+            <h3>{% if object %}Редагувати{% else %}Додати{% endif %} книгу</h3>
+            <form method="post">
+                {% csrf_token %}
+                <div class="mb-3">
+                    {{ form.as_p }}
+                </div>
+                <button type="submit" class="btn btn-success">Зберегти</button>
+                <a href="{% url 'catalog:book_list' %}" class="btn btn-secondary">Скасувати</a>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

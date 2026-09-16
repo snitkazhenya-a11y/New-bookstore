@@ -1,0 +1,17 @@
+Plaintext
+# Python bytecode
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environment
+.venv/
+venv/
+ENV/
+
+# Database
+db.sqlite3
+
+# IDE
+.idea/
