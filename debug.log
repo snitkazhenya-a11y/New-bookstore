@@ -1602,3 +1602,264 @@ Watching for file changes with StatReloader
 "GET /static/admin/css/login.css HTTP/1.1" 304 0
 "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
 "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+"POST /admin/login/?next=/admin/blog/post/ HTTP/1.1" 302 0
+"GET /admin/blog/post/ HTTP/1.1" 200 10058
+"GET /static/admin/css/base.css HTTP/1.1" 304 0
+"GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0
+"GET /static/admin/js/theme.js HTTP/1.1" 304 0
+"GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+"GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+"GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+"GET /admin/blog/post/add/ HTTP/1.1" 200 13213
+"GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"POST /admin/blog/post/add/ HTTP/1.1" 302 0
+"GET /admin/blog/post/ HTTP/1.1" 200 11535
+"GET /static/admin/css/base.css HTTP/1.1" 304 0
+"GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0
+"GET /static/admin/js/theme.js HTTP/1.1" 304 0
+"GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+"GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+"GET /admin/accounts/customuser/add/ HTTP/1.1" 200 14694
+"GET /static/admin/css/unusable_password_field.css HTTP/1.1" 200 663
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /static/admin/js/unusable_password_field.js HTTP/1.1" 200 1480
+"POST /admin/accounts/customuser/add/ HTTP/1.1" 200 14974
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"POST /admin/accounts/customuser/add/ HTTP/1.1" 302 0
+"GET /admin/accounts/customuser/2/change/ HTTP/1.1" 200 25487
+"GET /static/admin/js/calendar.js HTTP/1.1" 200 9141
+"GET /static/admin/js/admin/DateTimeShortcuts.js HTTP/1.1" 200 19319
+"GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /static/admin/img/icon-clock.svg HTTP/1.1" 200 677
+"GET /static/admin/img/icon-calendar.svg HTTP/1.1" 200 1086
+"GET /admin/accounts/customuser/2/history/ HTTP/1.1" 200 9353
+"GET /admin/accounts/ HTTP/1.1" 200 5507
+"GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+"GET /static/admin/css/dashboard.css HTTP/1.1" 200 441
+"GET /admin/accounts/customuser/2/history/ HTTP/1.1" 200 9353
+"GET /admin/accounts/customuser/2/change/ HTTP/1.1" 200 25252
+"GET /admin/ HTTP/1.1" 200 10042
+"GET /admin/auth/group/add/ HTTP/1.1" 200 15225
+"GET /static/admin/css/base.css HTTP/1.1" 304 0
+"GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+"GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0
+"GET /static/admin/js/theme.js HTTP/1.1" 304 0
+"GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+"POST /admin/auth/group/add/ HTTP/1.1" 302 0
+"GET /admin/auth/group/ HTTP/1.1" 200 11882
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/auth/group/add/ HTTP/1.1" 200 15225
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"POST /admin/auth/group/add/ HTTP/1.1" 302 0
+"GET /admin/auth/group/ HTTP/1.1" 200 12153
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/ HTTP/1.1" 200 10726
+"GET /admin/catalog/category/add/ HTTP/1.1" 200 16177
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"POST /admin/catalog/category/add/ HTTP/1.1" 302 0
+"GET /admin/catalog/category/ HTTP/1.1" 200 12628
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/ HTTP/1.1" 200 11095
+"GET /admin/catalog/category/add/ HTTP/1.1" 200 16177
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"POST /admin/catalog/category/add/ HTTP/1.1" 302 0
+"GET /admin/catalog/category/ HTTP/1.1" 200 12971
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/catalog/category/add/ HTTP/1.1" 200 16177
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+"POST /admin/catalog/category/add/ HTTP/1.1" 302 0
+"GET /admin/catalog/category/ HTTP/1.1" 200 13318
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/catalog/book/add/ HTTP/1.1" 200 16432
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+"POST /admin/catalog/book/add/ HTTP/1.1" 302 0
+"GET /admin/catalog/book/ HTTP/1.1" 200 15363
+"GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0
+"GET /static/admin/css/base.css HTTP/1.1" 304 0
+"GET /static/admin/js/theme.js HTTP/1.1" 304 0
+"GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+"GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+"GET /admin/ HTTP/1.1" 200 12182
+"GET /static/admin/css/dashboard.css HTTP/1.1" 304 0
+"GET /admin/catalog/book/ HTTP/1.1" 200 15152
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/catalog/book/add/ HTTP/1.1" 200 16432
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"POST /admin/catalog/book/add/ HTTP/1.1" 302 0
+"GET /admin/catalog/book/ HTTP/1.1" 200 16371
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /books/ HTTP/1.1" 200 4306
+"GET /media/books/56b50045adc0ebbc.jpg HTTP/1.1" 200 149085
+"GET /media/books/Screenshot_1111.png HTTP/1.1" 200 1411269
+"GET /admin/catalog/category/ HTTP/1.1" 200 13099
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/catalog/book/add/ HTTP/1.1" 200 16432
+"GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0
+"GET /static/admin/css/base.css HTTP/1.1" 304 0
+"GET /static/admin/js/theme.js HTTP/1.1" 304 0
+"GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+"GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+"GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+"GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+"POST /admin/catalog/book/add/ HTTP/1.1" 302 0
+"GET /admin/catalog/book/ HTTP/1.1" 200 17490
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/catalog/book/add/ HTTP/1.1" 200 16432
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"POST /admin/catalog/book/add/ HTTP/1.1" 200 17433
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"POST /admin/catalog/book/add/ HTTP/1.1" 302 0
+"GET /admin/catalog/book/ HTTP/1.1" 200 18499
+"GET /static/admin/css/base.css HTTP/1.1" 304 0
+"GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0
+"GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+"GET /static/admin/js/theme.js HTTP/1.1" 304 0
+"GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+"GET /admin/catalog/book/add/ HTTP/1.1" 200 16432
+"GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+"POST /admin/catalog/book/add/ HTTP/1.1" 302 0
+"GET /admin/catalog/book/ HTTP/1.1" 200 19718
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/catalog/book/add/ HTTP/1.1" 200 16432
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"POST /admin/catalog/book/add/ HTTP/1.1" 302 0
+"GET /admin/catalog/book/ HTTP/1.1" 200 20636
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /books/ HTTP/1.1" 200 9394
+"GET /media/books/56b50045adc0ebbc.jpg HTTP/1.1" 304 0
+"GET /media/books/bagatiy-tato-bdniy-tato-chomu-vchaty-dtey-bagat-batyki----ne-vchaty-bdn_4617-512x512.jpg HTTP/1.1" 200 102868
+"GET /media/books/Screenshot_1111.png HTTP/1.1" 304 0
+"GET /media/books/47489536251f403e9181258bc8ab5aef.jpeg HTTP/1.1" 200 88293
+"GET /media/books/Screenshot_3333.png HTTP/1.1" 200 1191577
+"GET /admin/catalog/book/4/change/ HTTP/1.1" 200 17643
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"POST /admin/catalog/book/4/change/ HTTP/1.1" 302 0
+"GET /admin/catalog/book/ HTTP/1.1" 200 20659
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /books/ HTTP/1.1" 200 9622
+"GET /media/books/bagatiy-tato-bdniy-tato-chomu-vchaty-dtey-bagat-batyki----ne-vchaty-bdn_4617-512x512.jpg HTTP/1.1" 304 0
+"GET /media/books/47489536251f403e9181258bc8ab5aef.jpeg HTTP/1.1" 304 0
+"GET /media/books/Screenshot_32.png HTTP/1.1" 200 1267795
+"GET /admin/blog/post/add/ HTTP/1.1" 200 13254
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"POST /admin/blog/post/add/ HTTP/1.1" 302 0
+"GET /admin/blog/post/ HTTP/1.1" 200 11829
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/ HTTP/1.1" 200 13322
+"GET /static/admin/css/dashboard.css HTTP/1.1" 304 0
+"GET /admin/auth/group/ HTTP/1.1" 200 11955
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/ HTTP/1.1" 200 13322
+"GET /static/admin/css/base.css HTTP/1.1" 304 0
+"GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+"GET /static/admin/js/theme.js HTTP/1.1" 304 0
+"GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0
+"GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+"GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+"GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+"GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+Internal Server Error: /books/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/django/urls/base.py", line 81, in reverse
+    extra, resolver = resolver.namespace_dict[ns]
+                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^
+KeyError: 'blog'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/backends/django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/base.py", line 172, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/test/utils.py", line 114, in instrumented_test_render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/base.py", line 1018, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/base.py", line 1018, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/base.py", line 979, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/test/utils.py", line 114, in instrumented_test_render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/base.py", line 1018, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/base.py", line 1018, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/base.py", line 979, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/urls/base.py", line 92, in reverse
+    raise NoReverseMatch("%s is not a registered namespace" % key)
+django.urls.exceptions.NoReverseMatch: 'blog' is not a registered namespace
+"GET /books/ HTTP/1.1" 500 155072
+/app/bookstore/urls.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+/app/blog/views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /books/ HTTP/1.1" 200 9845
+"GET /media/books/56b50045adc0ebbc.jpg HTTP/1.1" 304 0
+"GET /media/books/bagatiy-tato-bdniy-tato-chomu-vchaty-dtey-bagat-batyki----ne-vchaty-bdn_4617-512x512.jpg HTTP/1.1" 304 0
+"GET /media/books/Screenshot_3333.png HTTP/1.1" 304 0
+"GET /media/books/47489536251f403e9181258bc8ab5aef.jpeg HTTP/1.1" 304 0
+"GET /media/books/Screenshot_32.png HTTP/1.1" 304 0
+"GET /media/books/Screenshot_1111.png HTTP/1.1" 304 0
+"GET /admin/ HTTP/1.1" 200 13322
+"GET /static/admin/css/base.css HTTP/1.1" 304 0
+"GET /static/admin/js/theme.js HTTP/1.1" 304 0
+"GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0
+"GET /static/admin/css/dashboard.css HTTP/1.1" 304 0
+"GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+"GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+"GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+"GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+"GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+"GET /admin/auth/group/ HTTP/1.1" 200 11955
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/ HTTP/1.1" 200 13322

@@ -13,8 +13,10 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
         <div class="container">
             <a class="navbar-link navbar-brand fw-bold" href="{% url 'catalog:book_list' %}">📚 Bookstore</a>
-            <div class="navbar-nav ms-auto">
-                <a class="btn btn-primary" href="{% url 'catalog:book_create' %}">+ Додати книгу</a>
+            <div class="navbar-nav ms-auto d-flex flex-row gar-2 align-items-center">
+                <a class="btn btn-outline-light btn-sm" href="{% url 'catalog:book_list' %}">Категорії </a>
+                <a class="btn btn-outline-light btn-sm" href="{% url 'blog:post_list' %}">Пости</a>
+                <a class="btn btn-primary btn-sm" href="{% url 'register' %}">Зареєструватися</a>
             </div>
         </div>
     </nav>
