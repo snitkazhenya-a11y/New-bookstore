@@ -1553,3 +1553,52 @@ Watching for file changes with StatReloader
 "GET /media/books/a429ba6d-d83f-11ec-8170-0050568ef5e6_9a56af6f-d841-11ec-8170-0050568ef5e6_1.webp HTTP/1.1" 304 0
 D:\Project\bookstore\bookstore\settings.py changed, reloading.
 D:\Project\bookstore\bookstore\settings.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+/app/bookstore/settings.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET /admin/blog/post/ HTTP/1.1" 302 0
+"GET /admin/login/?next=/admin/blog/post/ HTTP/1.1" 200 4193
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 4389
+"GET /admin/login/?next=/admin/blog/post/ HTTP/1.1" 200 4193
+"GET /static/admin/css/dark_mode.css HTTP/1.1" 200 2808
+"GET /static/admin/css/base.css HTTP/1.1" 200 22120
+"GET /static/admin/js/theme.js HTTP/1.1" 200 1653
+"GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2810
+"GET /static/admin/css/login.css HTTP/1.1" 200 951
+"GET /static/admin/css/responsive.css HTTP/1.1" 200 16565
+"GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 3063
+"POST /admin/login/?next=/admin/blog/post/ HTTP/1.1" 200 4362
+"GET /register/ HTTP/1.1" 200 2831
+"POST /admin/login/?next=/admin/blog/post/ HTTP/1.1" 200 4362
+"GET /static/admin/css/base.css HTTP/1.1" 304 0
+"GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0
+"GET /static/admin/js/theme.js HTTP/1.1" 304 0
+"GET /static/admin/css/login.css HTTP/1.1" 304 0
+"GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+"GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+"GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+"POST /admin/login/?next=/admin/blog/post/ HTTP/1.1" 200 4361
+"GET /books/ HTTP/1.1" 200 1647
+"GET /books/ HTTP/1.1" 200 1647
+Not Found: /
+"GET / HTTP/1.1" 404 4338
+/app/catalog/urls.py changed, reloading.
+Watching for file changes with StatReloader
+/app/catalog/urls.py changed, reloading.
+Watching for file changes with StatReloader
+/app/catalog/urls.py changed, reloading.
+Watching for file changes with StatReloader
+/app/catalog/urls.py changed, reloading.
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 1641
+"POST /admin/login/?next=/admin/blog/post/ HTTP/1.1" 200 4362
+"GET /static/admin/css/base.css HTTP/1.1" 304 0
+"GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0
+"GET /static/admin/js/theme.js HTTP/1.1" 304 0
+"GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+"GET /static/admin/css/login.css HTTP/1.1" 304 0
+"GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+"GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
