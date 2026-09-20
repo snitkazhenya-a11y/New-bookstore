@@ -38,11 +38,12 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'catalog',
-    'accounts'
+    'accounts',
+    'blog.apps.BlogConfig',
+    'cart',
 ]
 
 INSTALLED_APPS += ['debug_toolbar',
-    'blog.apps.BlogConfig',
 ]
 
 MIDDLEWARE = [
