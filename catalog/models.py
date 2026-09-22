@@ -1,4 +1,7 @@
 from django.db import models
+from imagekit.models import ProcessedImageField
+from imagekit.processors import ResizeToFill
+
 
 class Category(models.Model):
     name = models.CharField(max_length=100, verbose_name="Назва категорії")
@@ -24,7 +27,7 @@ class Book(models.Model):
     price = models.DecimalField(max_digits=10, decimal_places=2, verbose_name="Ціна")
     description = models.TextField(blank=True, verbose_name="Опис")
     stock = models.PositiveIntegerField(default=0, verbose_name="Кількість в наявності")
-    image = models.ImageField(upload_to='books/', blank=True, null=True, verbose_name="Фото")
+    image = ProcessedImageField(upload_to='books/', processors=[ResizeToFill(200, 300)],format='JPEG', options={'quality: 85'}, blank=True, null=True, verbose_name="Фото")
     available = models.BooleanField(default=True, verbose_name="Є в наявності")
 
     class Meta:

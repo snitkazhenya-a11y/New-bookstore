@@ -2339,3 +2339,130 @@ Watching for file changes with StatReloader
 "GET / HTTP/1.1" 200 17755
 "GET / HTTP/1.1" 200 14857
 "GET / HTTP/1.1" 200 14287
+"GET / HTTP/1.1" 200 14287
+"GET / HTTP/1.1" 200 14948
+"GET / HTTP/1.1" 200 14909
+"GET / HTTP/1.1" 200 14909
+"GET / HTTP/1.1" 200 14909
+"GET / HTTP/1.1" 200 14909
+"GET / HTTP/1.1" 200 16655
+"GET / HTTP/1.1" 200 16649
+"GET / HTTP/1.1" 200 16643
+"GET / HTTP/1.1" 200 16649
+"GET / HTTP/1.1" 200 16655
+"GET / HTTP/1.1" 200 16655
+"GET / HTTP/1.1" 200 16655
+"GET / HTTP/1.1" 200 16577
+"GET / HTTP/1.1" 200 16571
+"GET / HTTP/1.1" 200 16577
+"GET / HTTP/1.1" 200 16577
+"GET / HTTP/1.1" 200 16571
+"GET / HTTP/1.1" 200 16571
+"GET / HTTP/1.1" 200 16577
+"GET / HTTP/1.1" 200 16577
+"GET / HTTP/1.1" 200 16577
+"GET / HTTP/1.1" 200 16577
+"GET / HTTP/1.1" 200 16577
+"GET / HTTP/1.1" 200 16577
+/app/catalog/models.py changed, reloading.
+Watching for file changes with StatReloader
+/app/bookstore/settings.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+/app/catalog/models.py changed, reloading.
+Watching for file changes with StatReloader
+/app/catalog/models.py changed, reloading.
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 16577
+"GET / HTTP/1.1" 200 16577
+/app/catalog/models.py changed, reloading.
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 16577
+"GET /admin/catalog/book/ HTTP/1.1" 200 20384
+"GET /admin/catalog/book/1/change/ HTTP/1.1" 200 17545
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"POST /admin/catalog/book/1/change/ HTTP/1.1" 302 0
+"GET /admin/catalog/book/ HTTP/1.1" 200 20597
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/catalog/book/5/change/ HTTP/1.1" 200 18017
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"POST /admin/catalog/book/5/change/ HTTP/1.1" 302 0
+"GET /admin/catalog/book/ HTTP/1.1" 200 20718
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/catalog/book/3/change/ HTTP/1.1" 200 17772
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"POST /admin/catalog/book/3/change/ HTTP/1.1" 302 0
+"GET /admin/catalog/book/ HTTP/1.1" 200 20673
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/catalog/book/4/change/ HTTP/1.1" 200 17910
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"POST /admin/catalog/book/4/change/ HTTP/1.1" 302 0
+"GET /admin/catalog/book/ HTTP/1.1" 200 20659
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/catalog/book/6/change/ HTTP/1.1" 200 17744
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"POST /admin/catalog/book/6/change/ HTTP/1.1" 302 0
+"GET /admin/catalog/book/ HTTP/1.1" 200 20638
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/catalog/book/2/change/ HTTP/1.1" 200 17598
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"POST /admin/catalog/book/2/change/ HTTP/1.1" 302 0
+"GET /admin/catalog/book/ HTTP/1.1" 200 20625
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET / HTTP/1.1" 200 16577
+"GET / HTTP/1.1" 200 16577
+"GET / HTTP/1.1" 200 16577
+"GET /media/books/47489536251f403e9181258bc8ab5aef.jpeg HTTP/1.1" 200 88293
+"GET /media/books/bagatiy-tato-bdniy-tato-chomu-vchaty-dtey-bagat-batyki----ne-vchaty-bdn_4617-512x512.jpg HTTP/1.1" 200 102868
+"GET /media/books/56b50045adc0ebbc.jpg HTTP/1.1" 200 149085
+"GET /media/books/Screenshot_3333.png HTTP/1.1" 200 1191577
+"GET /media/books/Screenshot_1111.png HTTP/1.1" 200 1411269
+"GET /media/books/Screenshot_32.png HTTP/1.1" 200 1267795
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 4940
+"GET / HTTP/1.1" 200 16577
+"GET /media/books/bagatiy-tato-bdniy-tato-chomu-vchaty-dtey-bagat-batyki----ne-vchaty-bdn_4617-512x512.jpg HTTP/1.1" 200 102868
+"GET /media/books/47489536251f403e9181258bc8ab5aef.jpeg HTTP/1.1" 200 88293
+"GET /media/books/56b50045adc0ebbc.jpg HTTP/1.1" 200 149085
+"GET /media/books/Screenshot_32.png HTTP/1.1" 200 1267795
+"GET /media/books/Screenshot_3333.png HTTP/1.1" 200 1191577
+"GET /media/books/Screenshot_1111.png HTTP/1.1" 200 1411269
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 4940
+"GET / HTTP/1.1" 200 16577
+"GET /media/books/47489536251f403e9181258bc8ab5aef.jpeg HTTP/1.1" 200 88293
+"GET /media/books/bagatiy-tato-bdniy-tato-chomu-vchaty-dtey-bagat-batyki----ne-vchaty-bdn_4617-512x512.jpg HTTP/1.1" 200 102868
+"GET /media/books/56b50045adc0ebbc.jpg HTTP/1.1" 200 149085
+"GET /media/books/Screenshot_3333.png HTTP/1.1" 200 1191577
+"GET /media/books/Screenshot_32.png HTTP/1.1" 200 1267795
+"GET /media/books/Screenshot_1111.png HTTP/1.1" 200 1411269
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 4940
+"GET / HTTP/1.1" 200 16577
+"GET /media/books/bagatiy-tato-bdniy-tato-chomu-vchaty-dtey-bagat-batyki----ne-vchaty-bdn_4617-512x512.jpg HTTP/1.1" 200 102868
+"GET /media/books/47489536251f403e9181258bc8ab5aef.jpeg HTTP/1.1" 200 88293
+"GET /media/books/56b50045adc0ebbc.jpg HTTP/1.1" 200 149085
+"GET /media/books/Screenshot_1111.png HTTP/1.1" 200 1411269
+"GET /media/books/Screenshot_3333.png HTTP/1.1" 200 1191577
+"GET /media/books/Screenshot_32.png HTTP/1.1" 200 1267795
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 4940
+"GET / HTTP/1.1" 200 16577
+"GET /media/books/47489536251f403e9181258bc8ab5aef.jpeg HTTP/1.1" 200 88293
+"GET /media/books/bagatiy-tato-bdniy-tato-chomu-vchaty-dtey-bagat-batyki----ne-vchaty-bdn_4617-512x512.jpg HTTP/1.1" 200 102868
+"GET /media/books/56b50045adc0ebbc.jpg HTTP/1.1" 200 149085
+"GET /media/books/Screenshot_32.png HTTP/1.1" 200 1267795
+"GET /media/books/Screenshot_3333.png HTTP/1.1" 200 1191577
+"GET /media/books/Screenshot_1111.png HTTP/1.1" 200 1411269
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 4940
+"GET / HTTP/1.1" 200 16577
+"GET /media/books/bagatiy-tato-bdniy-tato-chomu-vchaty-dtey-bagat-batyki----ne-vchaty-bdn_4617-512x512.jpg HTTP/1.1" 200 102868
+"GET /media/books/47489536251f403e9181258bc8ab5aef.jpeg HTTP/1.1" 200 88293
+"GET /media/books/56b50045adc0ebbc.jpg HTTP/1.1" 200 149085
+"GET /media/books/Screenshot_32.png HTTP/1.1" 200 1267795
+"GET /media/books/Screenshot_3333.png HTTP/1.1" 200 1191577
+"GET /media/books/Screenshot_1111.png HTTP/1.1" 200 1411269
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 4940
+"GET / HTTP/1.1" 200 16313

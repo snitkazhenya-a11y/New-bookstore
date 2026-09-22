@@ -27,27 +27,43 @@
 <div class="row">
     {% for book in books %}
         <div class="col-md-4 mb-4">
-            <div class="card h-100 shadow-sm">
+            <div class="card h-100 shadow-sm border-0">
                 {% if book.image %}
-                    <img src="{{ book.image.url }}" class="card-img-top" alt="{{ book.title }}" style="height: 150px; object-fit: cover;">
+            <div style="height: 320px; overflow: hidden; background-color: #f8f9fa;">
+                        <img src="{{ book.image.url }}"
+                             class="card-img-top w-100 h-100"
+                             alt="{{ book.title }}"
+                             style="object-fit: cover; object-position: center;">
+                    </div>
+                {% else %}
+                    <div class="d-flex align-items-center justify-content-center bg-light"
+                         style="height: 320px; border-bottom: 1px solid #eee;">
+                         <span class="text-muted small">Немає фото</span>
+                    </div>
                 {% endif %}
-
                 <div class="card-body">
                     <span class="badge bg-secondary mb-2">{{ book.category.name }}</span>
                     <h5 class="card-title">{{ book.title }}</h5>
-                    <p class="card-text text-muted">Автор: {{ book.author }}</p>
+                    <p class="card-text text-muted mb-1">Автор: {{ book.author }}</p>
+                    <p class="text-muted small mb-1">В наявності: <strong>{{ book.stock }} шт.</strong></p>
                     <p class="fw-bold text-success">{{ book.price }} грн</p>
                 </div>
                 <div class="px-3 pb-2">
-                    <form action="{% url 'cart:cart_add' book.id %}" method="post">
-                        {% csrf_token %}
-                        <div style="display: flex; gap: 5px; margin-bottom: 5px;">
-                            <input type="number" name="quantity" value="1" min="1" max="99" class="form-control text-center" style="width: 70px;">
-                            <button type="submit" class="btn btn-success w-100">
-                                Купити
-                            </button>
+                    {% if book.stock > 0 %}
+                        <form action="{% url 'cart:cart_add' book.id %}" method="post">
+                            {% csrf_token %}
+                            <div style="display: flex; gap: 5px; margin-bottom: 5px;">
+                                <input type="number" name="quantity" value="1" min="1" max="{{ book.stock }}" class="form-control text-center" style="width: 70px;">
+                                <button type="submit" class="btn btn-success w-100">
+                                    Купити
+                                </button>
+                            </div>
+                        </form>
+                    {% else %}
+                        <div class="text-center py-2">
+                            <span class="badge bg-danger w-100 py-2">Немає в наявності</span>
                         </div>
-                    </form>
+                    {% endif %}
                 </div>
                 <div class="card-footer bg-white border-0 d-flex justify-content-between">
                     <a href="{% url 'catalog:book_detail' book.pk %}" class="btn btn-info btn-sm text-white">Переглянути</a>

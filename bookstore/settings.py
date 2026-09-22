@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'accounts',
     'blog.apps.BlogConfig',
     'cart',
+    'imagekit',
 ]
 
 INSTALLED_APPS += ['debug_toolbar',
