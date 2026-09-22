@@ -5,17 +5,28 @@
     <title>Кошик</title>
 </head>
 <body>
-    <h1>Ваш кошик</h1>>
+    <h1>Ваш кошик</h1>
 
     {% if cart %}
-        <ul>
+        <table border="1" cellpadding="10" style="border-collapse: collapse; width: 100%;">
+            <tr>
+                <th>Назва</th>
+                <th>Ціна</th>
+                <th>Кількість</th>
+                <th>Дії</th>
+            </tr>
             {% for key, item in cart.items %}
-                <li>
-                    <strong>{{ item.title }}</strong> -
-                    {{ item.price }} грн x {{ item.quantity }} шт.
-                </li>
+                <tr>
+                    <td>{{ item.title }}</td>
+                    <td>{{ item.price }} грн</td>
+                    <td>{{ item.quantity }} шт.</td>
+                    <td>
+                        <a href="{% url 'cart:cart_remove' key %}" style="color: red; text-decoration: none;">Видалити</a>
+                    </td>
+                </tr>
             {% endfor %}
-        </ul>
+        </table>
+        <br>
         <a href="{% url 'catalog:book_list' %}">Продовжити покупки</a>
     {% else %}
         <p>Ваш кошик порожній.</p>

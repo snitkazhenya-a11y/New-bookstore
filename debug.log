@@ -2254,3 +2254,88 @@ django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 23: 'e
 "GET /cart/ HTTP/1.1" 500 146628
 "GET /cart/ HTTP/1.1" 200 502
 "GET /cart/ HTTP/1.1" 200 502
+/app/cart/views.py changed, reloading.
+ged, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+/app/cart/views.py changed, reloading.
+ged, reloading.
+Watching for file changes with StatReloader
+
+/app/cart/urls.py changed, reloading.
+ged, reloading.
+Watching for file changes with StatReloader
+
+Internal Server Error: /cart/add/5/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/cart/views.py", line 11, in cart_add
+    quantity = int(request.POST('quantity', 1))
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: 'QueryDict' object is not callable
+"POST /cart/add/5/ HTTP/1.1" 500 60098
+/app/cart/views.py changed, reloading.
+Watching for file changes with StatReloader
+reloading.
+Watching for file changes with StatReloader
+Internal Server Error: /cart/add/5/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/django/utils/datastructures.py", line 84, in __getitem__
+    list_ = super().__getitem__(key)
+            ^^^^^^^^^^^^^^^^^^^^^^^^
+KeyError: ('quantity', 1)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/cart/views.py", line 11, in cart_add
+    quantity = int(request.POST['quantity', 1])
+                   ~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/utils/datastructures.py", line 86, in __getitem__
+    raise MultiValueDictKeyError(key)
+django.utils.datastructures.MultiValueDictKeyError: ('quantity', 1)
+"POST /cart/add/5/ HTTP/1.1" 500 68737
+/app/cart/views.py changed, reloading.
+ged, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"POST /cart/add/5/ HTTP/1.1" 302 0
+Internal Server Error: /cart/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/cart/views.py", line 6, in cart_detail
+    return render(request, 'cart/cart_detail.html', {'cart': cart})
+           ^^^^^^
+NameError: name 'render' is not defined
+"GET /cart/ HTTP/1.1" 500 59093
+/app/cart/views.py changed, reloading.
+ged, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET /cart/ HTTP/1.1" 200 1436
+"GET /cart/remove/3/ HTTP/1.1" 302 0
+"GET /cart/ HTTP/1.1" 200 1013
+"GET /cart/remove/5/ HTTP/1.1" 302 0
+"GET /cart/ HTTP/1.1" 200 289
+"GET / HTTP/1.1" 200 14125
+"GET / HTTP/1.1" 200 14125
+"GET / HTTP/1.1" 200 14491
+"GET / HTTP/1.1" 200 17755
+"GET / HTTP/1.1" 200 14857
+"GET / HTTP/1.1" 200 14287
