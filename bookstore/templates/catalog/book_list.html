@@ -38,6 +38,12 @@
                     <p class="card-text text-muted">Автор: {{ book.author }}</p>
                     <p class="fw-bold text-success">{{ book.price }} грн</p>
                 </div>
+                <form action="{% url 'cart:cart_add' book.id %}" method="post" style="margin-top: 5px;">
+                    {% csrf_token %}
+                    <button type="submit" style="background-color: #28a745; color: white; border: none; padding: 8px 15px; border-radius: 4px; cursor: pointer; width: 100%;">
+                     Купити
+                    </button>
+                </form>
                 <div class="card-footer bg-white border-0 d-flex justify-content-between">
                     <a href="{% url 'catalog:book_detail' book.pk %}" class="btn btn-info btn-sm text-white">Переглянути</a>
                     <div>

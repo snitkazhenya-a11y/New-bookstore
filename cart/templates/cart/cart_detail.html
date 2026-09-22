@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Кошик</title>
+</head>
+<body>
+    <h1>Ваш кошик</h1>>
+
+    {% if cart %}
+        <ul>
+            {% for key, item in cart.items %}
+                <li>
+                    <strong>{{ item.title }}</strong> -
+                    {{ item.price }} грн x {{ item.quantity }} шт.
+                </li>
+            {% endfor %}
+        </ul>
+        <a href="{% url 'catalog:book_list' %}">Продовжити покупки</a>
+    {% else %}
+        <p>Ваш кошик порожній.</p>
+        <a href="{% url 'catalog:book_list' %}">Повернутися до каталогу</a>
+    {% endif %}
+</body>
+</html>
