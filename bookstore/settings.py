@@ -23,6 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = os.environ.get('SECRET_KEY', 'default-unsafe-key')
 DEBUG = os.environ.get('DEBUG', 'False') == 'True'
+STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY', 'ваш_тестовий_ключ')
 
 ALLOWED_HOSTS = ['*']
 
@@ -42,6 +43,7 @@ INSTALLED_APPS = [
     'blog.apps.BlogConfig',
     'cart',
     'imagekit',
+    'orders',
 ]
 
 INSTALLED_APPS += ['debug_toolbar',
@@ -166,3 +168,5 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+CART_SESSION_ID = 'cart'

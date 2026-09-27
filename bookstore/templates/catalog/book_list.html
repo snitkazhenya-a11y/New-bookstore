@@ -29,11 +29,11 @@
         <div class="col-md-4 mb-4">
             <div class="card h-100 shadow-sm border-0">
                 {% if book.image %}
-            <div style="height: 320px; overflow: hidden; background-color: #f8f9fa;">
+                    <div style="height: 250px; width: 100%; background-color: #f8f9fa; display: flex; align-items: center; justify-content: center; padding: 10px; border-bottom: 1px solid #eee;">
                         <img src="{{ book.image.url }}"
-                             class="card-img-top w-100 h-100"
+                             class="card-img-top"
                              alt="{{ book.title }}"
-                             style="object-fit: cover; object-position: center;">
+                             style="max-height: 100%; max-width: 100%; object-fit: contain; object-position: center;">
                     </div>
                 {% else %}
                     <div class="d-flex align-items-center justify-content-center bg-light"

@@ -4,3 +4,4 @@ pillow
 redis
 django-debug-toolbar
 django-imagekit
+stripe

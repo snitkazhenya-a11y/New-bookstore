@@ -18,6 +18,9 @@
                 <a class="btn btn-outline-light btn-sm" href="{% url 'blog:post_list' %}">Пости</a>
                 <a class="btn btn-primary btn-sm" href="{% url 'register' %}">Зареєструватися</a>
                 <a class="btn btn-outline-warning btn-sm" href="{% url 'cart:cart_detail' %}">🛒 Кошик</a>
+                {% if request.user.is_staff %}
+                    <a class="btn btn-outline-danger btn-sm me-2" href="{% url 'admin:index' %}">Адмінка</a>
+                {% endif %}
             </div>
         </div>
     </nav>

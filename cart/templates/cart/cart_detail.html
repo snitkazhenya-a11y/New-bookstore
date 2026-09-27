@@ -27,6 +27,9 @@
             {% endfor %}
         </table>
         <br>
+        <p>
+            <a href="{% url 'orders:order_create' %}" style="padding: 10px 15px; background-color: #28a745; color: white; text-decoration: none; border-radius: 4px;">Оформити замовлення</a>
+        </p>
         <a href="{% url 'catalog:book_list' %}">Продовжити покупки</a>
     {% else %}
         <p>Ваш кошик порожній.</p>
