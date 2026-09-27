@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container mt-4">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h1>Блог</h1>
+        <a href="{% url 'blog:post_create' %}" class="btn btn-primary">Додати пост</a>
+    </div>
+
+    {% if posts %}
+        <div class="list-group">
+            {% for post in posts %}
+                <div class="list-group-item list-group-item-action mb-3 shadow-sm rounded">
+                    <h3>{{ post.title }}</h3>
+                    <p class="text-muted"><small>Опубліковано: {{ post.created_at|default:"" }}</small></p>
+                    <p>{{ post.content|truncatewords:30 }}</p>
+                </div>
+            {% endfor %}
+        </div>
+    {% else %}
+        <p class="text-muted">Постів поки немає. Будьте першим, хто додасть статтю!</p>
+    {% endif %}
+</div>
+{% endblock %}

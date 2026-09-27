@@ -10,10 +10,8 @@ stripe.api_key = settings.STRIPE_SECRET_KEY
 
 def create_order(cart, cleaned_data):
     with transaction.atomic():
-        # замовлення
         order = Order.objects.create(
-            first_name=cleaned_data['first_name'],
-            last_name=cleaned_data['last_name'],
+            name=cleaned_data.get('name', ''),
             email=cleaned_data['email'],
             address=cleaned_data['address']
         )
@@ -36,7 +34,7 @@ def create_order(cart, cleaned_data):
 
         # Відправка Email клієнту
         subject = f'Замовлення №{order.id}'
-        message = f'Вітаю, {order.first_name}!\n\nВи успішно оформили замовлення у нашій книгарні. ID замовлення: {order.id}.'
+        message = f'Вітаю, {order.name}!\n\nВи успішно оформили замовлення у нашій книгарні. ID замовлення: {order.id}.'
         send_mail(subject, message, 'from@bookstore.com', [order.email])
 
         return order
@@ -48,7 +46,11 @@ def create_stripe_checkout_session(request, order):
     cancel_url = request.build_absolute_uri(reverse('payment:canceled'))
 
     line_items = []
-    for item in order.items.all():
+    for item in order.item.all():
+        title_str = str(item.book.title)
+        safe_title = item.book.title.encode('ascii', 'ignore').decode('ascii')
+        if not safe_title:
+            safe_title = f"Book #{item.book.id}"
         line_items.append({
             'price_data': {
                 'currency': 'uah',
