@@ -5,3 +5,6 @@ redis
 django-debug-toolbar
 django-imagekit
 stripe
+pytest-django
+factory-boy
+pytest-cov

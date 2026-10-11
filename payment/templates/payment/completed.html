@@ -1,0 +1,17 @@
+{% load i18n %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Оплата успішна</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <div style="text-align: center; margin-top: 50px;">
+        <h1>Дякуємо за замовлення!</h1>
+        <p>Ваша оплата успішно пройшла (тестовий режим).</p>
+        <a href="{% url 'book_list' %}">Повернутися до каталогу книг</a>
+    </div>
+</body>
+</html>

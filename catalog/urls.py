@@ -10,4 +10,7 @@ urlpatterns = [
     path('books/create/', views.BookCreateView.as_view(), name='book_create'),
     path('books/<int:pk>/update/', views.BookUpdateView.as_view(), name='book_update'),
     path('books/<int:pk>/delete/', views.BookDeleteView.as_view(), name='book_delete'),
+    path('async/books/', views.async_book_list_view, name='async_book_list'),
+    path('async/books/<int:pk>/', views.async_book_detail_view, name='async_book_detail'),
+    path('async/books/expensive/', views.async_expensive_books_count, name='async_expensive_count'),
 ]

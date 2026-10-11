@@ -44,6 +44,9 @@
                 <div class="card-body">
                     <span class="badge bg-secondary mb-2">{{ book.category.name }}</span>
                     <h5 class="card-title">{{ book.title }}</h5>
+                    {% if book.sku %}
+                        <p class="text-muted mb-1"><small>SKU: <strong>{{ book.sku }}</strong></small></p>
+                    {% endif %}
                     <p class="card-text text-muted mb-1">Автор: {{ book.author }}</p>
                     <p class="text-muted small mb-1">В наявності: <strong>{{ book.stock }} шт.</strong></p>
                     <p class="fw-bold text-success">{{ book.price }} грн</p>
