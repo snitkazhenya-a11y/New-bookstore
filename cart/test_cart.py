@@ -2,7 +2,7 @@ import pytest
 from catalog.factories import BookFactory
 from cart.cart import Cart
 
-
+# Generated with AI, reviewed and modified
 @pytest.mark.django_db
 def test_cart_add(client):
     book = BookFactory(price=100.00)

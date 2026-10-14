@@ -2,7 +2,7 @@ from unittest.mock import patch
 import pytest
 from django.core import mail
 
-
+# Generated with AI, reviewed and modified
 @pytest.mark.django_db
 @patch('stripe.checkout.Session.create')
 def test_stripe_payment_mock(mock_stripe_create):
@@ -21,7 +21,7 @@ def test_stripe_payment_mock(mock_stripe_create):
     assert session['id'] == 'cs_test_mocked_id'
     mock_stripe_create.assert_called_once()
 
-
+# Generated with AI, reviewed and modified
 @pytest.mark.django_db
 def test_email_sending():
     mail.send_mail(

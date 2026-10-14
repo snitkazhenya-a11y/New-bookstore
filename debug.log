@@ -4677,3 +4677,8 @@ Watching for file changes with StatReloader
 Watching for file changes with StatReloader
 /app/catalog/views.py changed, reloading.
 Watching for file changes with StatReloader
+"GET /admin/catalog/book/ HTTP/1.1" 200 22109
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 6081
+"GET /orders/create/ HTTP/1.1" 302 0
+Watching for file changes with StatReloader

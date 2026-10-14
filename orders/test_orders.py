@@ -2,7 +2,7 @@ import pytest
 from orders.models import Order, OrderItem
 from catalog.factories import BookFactory
 
-
+# Generated with AI, reviewed and modified
 @pytest.mark.django_db
 def test_book_creation():
     order = Order.objects.create(
