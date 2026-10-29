@@ -22,6 +22,7 @@ class Book(models.Model):
         related_name='books',
         verbose_name = "Категорія"
     )
+    created_at = models.DateTimeField(auto_now_add=True)
     title = models.CharField(max_length=200, verbose_name="Назва книги")
     author = models.CharField(max_length=150, verbose_name="Автор")
     price = models.DecimalField(max_digits=10, decimal_places=2, verbose_name="Ціна")

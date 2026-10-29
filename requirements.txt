@@ -1,10 +1,16 @@
-psycopg2-binary
 django
+djangorestframework
+djangorestframework-simplejwt
+drf-spectacular
+django-filter
+django-cors-headers
+psycopg2-binary
 pillow
 redis
 django-debug-toolbar
 django-imagekit
 stripe
+pytest
 pytest-django
 factory-boy
 pytest-cov
