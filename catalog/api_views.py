@@ -1,6 +1,7 @@
 from rest_framework import viewsets
 from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework.filters import SearchFilter, OrderingFilter
+from django.apps import AppConfig
 
 from .models import Book, Category
 from .serializers import BookSerializer, CategorySerializer
@@ -16,3 +17,10 @@ class BookViewSet(viewsets.ModelViewSet):
     filterset_fields = ['category', 'price']
     search_fields = ['title', 'author']
     ordering_fields = ['price', 'created_at']
+
+class CatalogConfig(AppConfig):
+    default_auto_field = 'django.db.models.BigAutoField'
+    name = 'catalog'
+
+    def ready(self):
+        import catalog.signals

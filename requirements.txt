@@ -13,4 +13,8 @@ stripe
 pytest
 pytest-django
 factory-boy
-pytest-cov
+celery==5.4.0
+redis
+django-redis==5.4.0
+gunicorn
+sentry_sdk
