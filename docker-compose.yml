@@ -25,7 +25,7 @@ services:
     env_file:
       - .env
     environment:
-      - DJANGO_SETTINGS_MODULE=bookstore.settings
+      - DJANGO_SETTINGS_MODULE=bookstore.settings.development
     depends_on:
       - db
       - redis
@@ -39,6 +39,8 @@ services:
       - .:/app
     env_file:
       - .env
+    environment:
+      - DJANGO_SETTINGS_MODULE=bookstore.settings.development
     depends_on:
       - db
       - redis
@@ -52,6 +54,8 @@ services:
       - .:/app
     env_file:
       - .env
+    environment:
+      - DJANGO_SETTINGS_MODULE=bookstore.settings.development
     depends_on:
       - db
       - redis
