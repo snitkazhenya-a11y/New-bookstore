@@ -19,34 +19,41 @@ from cart.api_views import CartViewSet
 from orders.api_views import OrderViewSet
 
 router = DefaultRouter()
-router.register(r'categories', CategoryViewSet, basename='category')
-router.register(r'books', BookViewSet, basename='book')
-router.register(r'cart', CartViewSet, basename='cart')
-router.register(r'orders', OrderViewSet, basename='order')
+router.register(r"categories", CategoryViewSet, basename="category")
+router.register(r"books", BookViewSet, basename="book")
+router.register(r"cart", CartViewSet, basename="cart")
+router.register(r"orders", OrderViewSet, basename="order")
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('health/', health_check, name='health_check'),
-    path('api/', include(router.urls)),
-    path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
-    path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
-    path('api/schema/', SpectacularAPIView.as_view(), name='schema'),
-    path('api/docs/', SpectacularSwaggerView.as_view(url_name='schema'), name='swagger-ui'),
-    path('api/redoc/', SpectacularRedocView.as_view(url_name='schema'), name='redoc'),
-    path('', include('catalog.urls')),
-    path('blog/', include('blog.urls')),
-    path('login/', LoginView.as_view(template_name='accounts/login.html'), name='login'),
-    path('logout/', LogoutView.as_view(), name='logout'),
-    path('register/', RegisterView.as_view(), name='register'),
-    path('cart/', include('cart.urls')),
-    path('orders/', include('orders.urls', namespace='orders')),
-    path('payment/', include('payment.urls', namespace='payment')),
+    path("admin/", admin.site.urls),
+    path("health/", health_check, name="health_check"),
+    path("api/", include(router.urls)),
+    path("api/token/", TokenObtainPairView.as_view(), name="token_obtain_pair"),
+    path("api/token/refresh/", TokenRefreshView.as_view(), name="token_refresh"),
+    path("api/schema/", SpectacularAPIView.as_view(), name="schema"),
+    path(
+        "api/docs/",
+        SpectacularSwaggerView.as_view(url_name="schema"),
+        name="swagger-ui",
+    ),
+    path("api/redoc/", SpectacularRedocView.as_view(url_name="schema"), name="redoc"),
+    path("", include("catalog.urls")),
+    path("blog/", include("blog.urls")),
+    path(
+        "login/", LoginView.as_view(template_name="accounts/login.html"), name="login"
+    ),
+    path("logout/", LogoutView.as_view(), name="logout"),
+    path("register/", RegisterView.as_view(), name="register"),
+    path("cart/", include("cart.urls")),
+    path("orders/", include("orders.urls", namespace="orders")),
+    path("payment/", include("payment.urls", namespace="payment")),
 ]
 
 if settings.DEBUG:
     import debug_toolbar
+
     urlpatterns = [
-        path('__debug__/', include(debug_toolbar.urls)),
+        path("__debug__/", include(debug_toolbar.urls)),
     ] + urlpatterns
 
 if settings.DEBUG:

@@ -1,6 +1,7 @@
 import factory
 from catalog.models import Book, Category
 
+
 class CategoryFactory(factory.django.DjangoModelFactory):
     class Meta:
         model = Category

@@ -9,7 +9,9 @@ from .models import Order, OrderItem
 from .tasks import send_order_confirmation_email
 
 # Залишаємо ініціалізацію ключа як приклад
-stripe.api_key = str(settings.STRIPE_SECRET_KEY).encode("ascii", "ignore").decode("ascii").strip()
+stripe.api_key = (
+    str(settings.STRIPE_SECRET_KEY).encode("ascii", "ignore").decode("ascii").strip()
+)
 
 
 def create_order(cart, cleaned_data):
@@ -34,7 +36,7 @@ def create_order(cart, cleaned_data):
 
         # Резервуємо/списуємо залишки на складі (web_b) через REST API
         for item in cart:
-            reserve_stock(book_id=item['book'].id, amount=item['quantity'])
+            reserve_stock(book_id=item["book"].id, amount=item["quantity"])
 
         # Очищуємо кошик після успішного створення замовлення та резервування
         cart.clear()
@@ -46,12 +48,12 @@ def create_order(cart, cleaned_data):
         )
 
         # Відправка Email клієнту
-        subject = f'Замовлення №{order.id}'
+        subject = f"Замовлення №{order.id}"
         message = (
-            f'Вітаю, {order.name}!\n\n'
-            f'Ви успішно оформили замовлення у нашій книгарні. ID замовлення: {order.id}.'
+            f"Вітаю, {order.name}!\n\n"
+            f"Ви успішно оформили замовлення у нашій книгарні. ID замовлення: {order.id}."
         )
-        send_mail(subject, message, 'from@bookstore.com', [order.email])
+        send_mail(subject, message, "from@bookstore.com", [order.email])
 
         return order
 
@@ -95,5 +97,5 @@ def create_stripe_checkout_session(request, order):
     # )
     # return session.url
 
-    success_url = request.build_absolute_uri(reverse('payment:completed'))
+    success_url = request.build_absolute_uri(reverse("payment:completed"))
     return success_url

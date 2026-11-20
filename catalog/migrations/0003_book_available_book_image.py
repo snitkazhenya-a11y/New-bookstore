@@ -6,18 +6,20 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('catalog', '0002_tech'),
+        ("catalog", "0002_tech"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='book',
-            name='available',
-            field=models.BooleanField(default=True, verbose_name='Є в наявності'),
+            model_name="book",
+            name="available",
+            field=models.BooleanField(default=True, verbose_name="Є в наявності"),
         ),
         migrations.AddField(
-            model_name='book',
-            name='image',
-            field=models.ImageField(blank=True, null=True, upload_to='books/', verbose_name='Фото'),
+            model_name="book",
+            name="image",
+            field=models.ImageField(
+                blank=True, null=True, upload_to="books/", verbose_name="Фото"
+            ),
         ),
     ]

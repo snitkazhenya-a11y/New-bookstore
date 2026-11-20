@@ -2,6 +2,7 @@ import pytest
 from django.contrib.sessions.models import Session
 from accounts.tasks import cleanup_expired_sessions
 
+
 @pytest.mark.django_db
 def test_cleanup_expired_sessions_task():
     try:

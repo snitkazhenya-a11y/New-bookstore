@@ -18,7 +18,7 @@ def health_check(request):
 
     # Перевірка Redis
     try:
-        r = redis.from_url(settings.CACHES['default']['LOCATION'])
+        r = redis.from_url(settings.CACHES["default"]["LOCATION"])
         r.ping()
         health_data["redis"] = "connected"
     except Exception as e:

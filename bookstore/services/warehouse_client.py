@@ -45,7 +45,7 @@ def reserve_stock(book_id: int | str, amount: int = 1) -> dict:
     )
     err = WarehouseServiceError(message)
     sentry_sdk.capture_exception(err)
-    
+
     logger.warning(
         "Склад відхилив резервування book_id=%s, amount=%s (HTTP %s): %s",
         book_id,

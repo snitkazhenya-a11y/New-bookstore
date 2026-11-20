@@ -7485,3 +7485,11 @@ Unauthorized: /api/token/
 Unauthorized: /api/token/refresh/
 Unauthorized: /api/books/
 Bad Request: /api/orders/
+Unauthorized: /api/token/
+Unauthorized: /api/token/refresh/
+Unauthorized: /api/books/
+Bad Request: /api/orders/
+Unauthorized: /api/token/
+Unauthorized: /api/token/refresh/
+Unauthorized: /api/books/
+Bad Request: /api/orders/

@@ -7,13 +7,15 @@ from django.db import migrations
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('catalog', '0003_book_available_book_image'),
+        ("catalog", "0003_book_available_book_image"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='book',
-            name='image',
-            field=imagekit.models.fields.ProcessedImageField(blank=True, null=True, upload_to='books/', verbose_name='Фото'),
+            model_name="book",
+            name="image",
+            field=imagekit.models.fields.ProcessedImageField(
+                blank=True, null=True, upload_to="books/", verbose_name="Фото"
+            ),
         ),
     ]

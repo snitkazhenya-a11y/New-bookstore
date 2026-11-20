@@ -10,41 +10,56 @@ class Category(models.Model):
     class Meta:
         verbose_name = "Категорія"
         verbose_name_plural = "Категорії"
-        ordering = ['name']
+        ordering = ["name"]
 
     def __str__(self):
         return self.name
+
 
 class Book(models.Model):
     category = models.ForeignKey(
         Category,
         on_delete=models.CASCADE,
-        related_name='books',
-        verbose_name = "Категорія"
+        related_name="books",
+        verbose_name="Категорія",
     )
     created_at = models.DateTimeField(auto_now_add=True)
     title = models.CharField(max_length=200, verbose_name="Назва книги")
     author = models.CharField(max_length=150, verbose_name="Автор")
     price = models.DecimalField(max_digits=10, decimal_places=2, verbose_name="Ціна")
     description = models.TextField(blank=True, verbose_name="Опис")
-    sku = models.CharField(max_length=50, unique=True, blank=True, null=True, verbose_name="SKU")
+    sku = models.CharField(
+        max_length=50, unique=True, blank=True, null=True, verbose_name="SKU"
+    )
     stock = models.PositiveIntegerField(default=0, verbose_name="Кількість в наявності")
-    image = ProcessedImageField(upload_to='books/', processors=[ResizeToFill(200, 300)],format='JPEG', options={'quality: 85'}, blank=True, null=True, verbose_name="Фото")
+    image = ProcessedImageField(
+        upload_to="books/",
+        processors=[ResizeToFill(200, 300)],
+        format="JPEG",
+        options={"quality: 85"},
+        blank=True,
+        null=True,
+        verbose_name="Фото",
+    )
     available = models.BooleanField(default=True, verbose_name="Є в наявності")
 
     class Meta:
         verbose_name = "Книга"
         verbose_name_plural = "Книги"
-        ordering = ['title']
+        ordering = ["title"]
 
     def __str__(self):
         return self.title
 
+
 class Tech(models.Model):
     name = models.CharField(max_length=200, verbose_name="Назва техніки")
-    category = models.ForeignKey('Category', on_delete=models.CASCADE, verbose_name="Категорія")
-    price = models.DecimalField(max_length=10, decimal_places=2, max_digits=10, verbose_name="Ціна")
-
+    category = models.ForeignKey(
+        "Category", on_delete=models.CASCADE, verbose_name="Категорія"
+    )
+    price = models.DecimalField(
+        max_length=10, decimal_places=2, max_digits=10, verbose_name="Ціна"
+    )
 
     class Meta:
         verbose_name = "Техніка"

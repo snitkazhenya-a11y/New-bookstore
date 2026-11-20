@@ -11,9 +11,9 @@ def order_create(request):
 
     # Якщо кошик порожній
     if len(cart) == 0:
-        return redirect('catalog:book_list')
+        return redirect("catalog:book_list")
 
-    if request.method == 'POST':
+    if request.method == "POST":
         form = OrderCreateForm(request.POST)
         if form.is_valid():
             try:
@@ -30,4 +30,4 @@ def order_create(request):
     else:
         form = OrderCreateForm()
 
-    return render(request, 'orders/order_create.html', {'cart': cart, 'form': form})
+    return render(request, "orders/order_create.html", {"cart": cart, "form": form})

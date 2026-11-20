@@ -6,35 +6,35 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('orders', '0001_initial'),
+        ("orders", "0001_initial"),
     ]
 
     operations = [
         migrations.RenameField(
-            model_name='order',
-            old_name='first_name',
-            new_name='city',
+            model_name="order",
+            old_name="first_name",
+            new_name="city",
         ),
         migrations.RenameField(
-            model_name='order',
-            old_name='last_name',
-            new_name='name',
+            model_name="order",
+            old_name="last_name",
+            new_name="name",
         ),
         migrations.AddField(
-            model_name='order',
-            name='phone',
-            field=models.CharField(default='', max_length=20),
+            model_name="order",
+            name="phone",
+            field=models.CharField(default="", max_length=20),
             preserve_default=False,
         ),
         migrations.AddField(
-            model_name='order',
-            name='state',
+            model_name="order",
+            name="state",
             field=models.CharField(blank=True, max_length=100, null=True),
         ),
         migrations.AddField(
-            model_name='order',
-            name='zip_code',
-            field=models.CharField(default='', max_length=20),
+            model_name="order",
+            name="zip_code",
+            field=models.CharField(default="", max_length=20),
             preserve_default=False,
         ),
     ]

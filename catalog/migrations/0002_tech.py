@@ -7,21 +7,47 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('catalog', '0001_initial'),
+        ("catalog", "0001_initial"),
     ]
 
     operations = [
         migrations.CreateModel(
-            name='Tech',
+            name="Tech",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('name', models.CharField(max_length=200, verbose_name='Назва техніки')),
-                ('price', models.DecimalField(decimal_places=2, max_digits=10, max_length=10, verbose_name='Ціна')),
-                ('category', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='catalog.category', verbose_name='Категорія')),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                (
+                    "name",
+                    models.CharField(max_length=200, verbose_name="Назва техніки"),
+                ),
+                (
+                    "price",
+                    models.DecimalField(
+                        decimal_places=2,
+                        max_digits=10,
+                        max_length=10,
+                        verbose_name="Ціна",
+                    ),
+                ),
+                (
+                    "category",
+                    models.ForeignKey(
+                        on_delete=django.db.models.deletion.CASCADE,
+                        to="catalog.category",
+                        verbose_name="Категорія",
+                    ),
+                ),
             ],
             options={
-                'verbose_name': 'Техніка',
-                'verbose_name_plural': 'Техніка',
+                "verbose_name": "Техніка",
+                "verbose_name_plural": "Техніка",
             },
         ),
     ]
