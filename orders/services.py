@@ -2,6 +2,7 @@ import stripe
 from django.conf import settings
 from django.urls import reverse
 from django.db import transaction
+from django.core.mail import send_mail
 
 from bookstore.services.warehouse_client import reserve_stock
 from .models import Order, OrderItem

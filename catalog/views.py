@@ -56,7 +56,7 @@ async def async_book_list_view(request):
     data = [{"title": book.title, "price": str(book.price)} for book in books]
     return JsonResponse({"books": data})
 
-async def async_book_detail_view(request):
+async def async_book_detail_view(request, pk):
     try:
         book = await Book.objects.aget(pk=pk)
         return JsonResponse({
@@ -65,7 +65,7 @@ async def async_book_detail_view(request):
             "price": str(book.price),
         })
     except Book.DoesNotExist:
-        return JsonResponse({"error": "Книгу не знайдено"}, status=400)
+        return JsonResponse({"error": "Book not found"}, status=404)
 
 async def async_expensive_book_count(request):
     count = await Book.objects.filter(price__gt=500).acount()
