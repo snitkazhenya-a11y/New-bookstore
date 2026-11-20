@@ -18,3 +18,4 @@ redis
 django-redis==5.4.0
 gunicorn
 sentry_sdk
+requests

@@ -2,40 +2,54 @@ import stripe
 from django.conf import settings
 from django.urls import reverse
 from django.db import transaction
-from django.core.mail import send_mail
+
+from bookstore.services.warehouse_client import reserve_stock
 from .models import Order, OrderItem
+from .tasks import send_order_confirmation_email
 
 # Залишаємо ініціалізацію ключа як приклад
-stripe.api_key = str(settings.STRIPE_SECRET_KEY).encode('ascii', 'ignore').decode('ascii').strip()
+stripe.api_key = str(settings.STRIPE_SECRET_KEY).encode("ascii", "ignore").decode("ascii").strip()
 
 
 def create_order(cart, cleaned_data):
     with transaction.atomic():
         order = Order.objects.create(
-            name=cleaned_data.get('name', ''),
-            email=cleaned_data['email'],
-            address=cleaned_data['address']
+            name=cleaned_data.get("name", ""),
+            email=cleaned_data["email"],
+            address=cleaned_data["address"],
         )
 
-        # позиції замовлення
-        order_items = []
-        for item in cart:
-            order_items.append(
-                OrderItem(
-                    order=order,
-                    book=item['book'],
-                    price=item['price'],
-                    quantity=item['quantity']
-                )
+        # Позиції замовлення
+        order_items = [
+            OrderItem(
+                order=order,
+                book=item["book"],
+                price=item["price"],
+                quantity=item["quantity"],
             )
+            for item in cart
+        ]
         OrderItem.objects.bulk_create(order_items)
 
-        # Очищуємо кошик після успішного створення
+        # Резервуємо/списуємо залишки на складі (web_b) через REST API
+        for item in cart:
+            reserve_stock(book_id=item['book'].id, amount=item['quantity'])
+
+        # Очищуємо кошик після успішного створення замовлення та резервування
         cart.clear()
+
+        transaction.on_commit(
+            lambda: send_order_confirmation_email.delay(
+                order.id, order.name, order.email
+            )
+        )
 
         # Відправка Email клієнту
         subject = f'Замовлення №{order.id}'
-        message = f'Вітаю, {order.name}!\n\nВи успішно оформили замовлення у нашій книгарні. ID замовлення: {order.id}.'
+        message = (
+            f'Вітаю, {order.name}!\n\n'
+            f'Ви успішно оформили замовлення у нашій книгарні. ID замовлення: {order.id}.'
+        )
         send_mail(subject, message, 'from@bookstore.com', [order.email])
 
         return order

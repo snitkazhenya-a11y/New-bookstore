@@ -1,21 +1,39 @@
-# Bookstore Project
+# Bookstore & Warehouse Microservice Platform (`ProjectA` + `ProjectB`)
 
-Django-мобільний / веб-додаток "Книжковий магазин", розроблений із використанням Django, PostgreSQL, Docker та pytest.
+Вебдодаток "Книжковий магазин" на базі **Django**, **Django REST Framework**, **PostgreSQL**, **Redis**, **Celery**, **Docker Compose**, **NGINX** та **pytest**, інтегрований із мікросервісом складу (`warehouse_service`).
 
-## Функціонал
-- Каталог книг із пагінацією та фільтрацією.
-- Керування кошиком через сесії користувача.
-- Оформлення та обробка замовлень із транзакціями бази даних.
-- Система авторизації та облікових записів.
+[![Django CI/CD](https://github.com/snitkazhenya-a11y/bookstore/actions/workflows/django.yml/badge.svg)](https://github.com/snitkazhenya-a11y/bookstore/actions/workflows/django.yml)
+[![codecov](https://codecov.io/gh/snitkazhenya-a11y/bookstore/branch/main/graph/badge.svg)](https://codecov.io/gh/snitkazhenya-a11y/bookstore)
 
-## AI Usage
-У ході розробки проєкту штучний інтелект використовувався для виконання таких етапів:
-* **Code Review:** аналіз та рефакторинг складних компонентів (`catalog/views.py`, `orders/services.py`, `cart/cart.py`), деталі у [AI_REVIEW.md](AI_REVIEW.md).
-* **Тестування:** написання та перевірка тестів (досягнуто покриття коду 77%).
-* **Документування:** генерація docstrings та перелік використаних промптів у [AI_PROMPTS.md](AI_PROMPTS.md).
+---
 
+## Архітектура системи
 
-# My Django Project
+```mermaid
+flowchart LR
+    Client["Клієнт / Браузер / API споживач"] --> Nginx["NGINX (:80)"]
 
-[![Django CI/CD](https://github.com/snitkazhenya-a11y/REPOSITORY_NAME/actions/workflows/django.yml/badge.svg)](https://github.com/snitkazhenya-a11y/REPOSITORY_NAME/actions/workflows/django.yml)
-[![codecov](https://codecov.io/gh/snitkazhenya-a11y/REPOSITORY_NAME/branch/main/graph/badge.svg)](https://codecov.io/gh/snitkazhenya-a11y/REPOSITORY_NAME)
+    subgraph ProjectA["ProjectA — bookstore (:8000)"]
+        WebA["Gunicorn / Django + DRF + JWT"]
+        CeleryW["Celery Worker"]
+        CeleryB["Celery Beat"]
+        DbA[("PostgreSQL (db_a)")]
+        RedisA[("Redis (redis_a)")]
+        WebA --> DbA
+        WebA <--> RedisA
+        CeleryW --> DbA
+        CeleryW <--> RedisA
+        CeleryB --> RedisA
+    end
+
+    subgraph ProjectB["ProjectB — warehouse_service (:8001)"]
+        WebB["Gunicorn / Django + DRF + JWT"]
+        DbB[("PostgreSQL (db_b)")]
+        WebB --> DbB
+    end
+
+    Nginx --> WebA
+    Nginx --> WebB
+    WebA -- "HTTP резервування залишків\n(/api/warehouse/stock/.../reserve/)" --> WebB
+    WebA -. "Помилки та трейси" .-> Sentry["Sentry"]
+    WebB -. "Помилки та трейси" .-> Sentry

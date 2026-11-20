@@ -12,13 +12,15 @@ def clear_cache():
 
 @pytest.mark.django_db
 def test_book_cache_invalidation_on_save():
-    category = Category.objects.create(name="Fiction")
+    category = Category.objects.create(name="Fiction", slug="fiction")
     book = Book.objects.create(
         title="Django for Professionals",
-        slug="django-for-professionals",
+        author="William S. Vincent",
         price=29.99,
-        category=category
+        category=category,
     )
+    book.title = "Django for Professionals (2nd ed.)"
+    book.save()
 
     # Імітуємо збереження даних у кеш (low-level cache)
     cache_key = f"book_detail_{book.pk}"

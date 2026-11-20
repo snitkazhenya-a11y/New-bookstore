@@ -36,3 +36,19 @@ sentry_sdk.init(
     traces_sample_rate=1.0,
     send_default_pii=True,
 )
+
+import sys
+
+if "pytest" in sys.modules or "test" in sys.argv:
+    DATABASES = {
+        "default": {
+            "ENGINE": "django.db.backends.sqlite3",
+            "NAME": BASE_DIR / "test_db.sqlite3",
+        }
+    }
+    CACHES = {
+        "default": {
+            "BACKEND": "django.core.cache.backends.locmem.LocMemCache",
+            "LOCATION": "unique-snowflake",
+        }
+    }

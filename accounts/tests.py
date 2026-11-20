@@ -1,7 +1,12 @@
+from datetime import timedelta
+from django.contrib.sessions.models import Session
 from django.urls import reverse
+from django.utils import timezone
 from rest_framework import status
 from rest_framework.test import APITestCase
 from django.contrib.auth import get_user_model
+
+from accounts.tasks import cleanup_expired_sessions
 
 User = get_user_model()
 
@@ -46,3 +51,23 @@ class AccountsAPITests(APITestCase):
         """Тест: помилка оновлення токена з невалідним/хибним refresh токеном"""
         response = self.client.post(self.refresh_url, {'refresh': 'invalid-refresh-token-string'})
         self.assertEqual(response.status_code, status.HTTP_401_UNAUTHORIZED)
+
+    def test_cleanup_expired_sessions_task(self):
+        """Тест: Celery-задача видаляє лише прострочені сесії"""
+        now = timezone.now()
+        Session.objects.create(
+            session_key="expired_sess",
+            session_data="",
+            expire_date=now - timedelta(days=1),
+        )
+        Session.objects.create(
+            session_key="active_sess",
+            session_data="",
+            expire_date=now + timedelta(days=1),
+        )
+
+        result = cleanup_expired_sessions.run()
+
+        self.assertIn("cleaned up", result)
+        self.assertFalse(Session.objects.filter(session_key="expired_sess").exists())
+        self.assertTrue(Session.objects.filter(session_key="active_sess").exists())

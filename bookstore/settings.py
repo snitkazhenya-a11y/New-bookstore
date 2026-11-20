@@ -17,6 +17,9 @@ from django.contrib import admin
 from django.urls import path, include
 from pathlib import Path
 from django.utils.translation import gettext_lazy as _
+import environ
+
+env = environ.Env()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -143,11 +146,11 @@ WSGI_APPLICATION = 'bookstore.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.environ.get('DB_NAME', 'bookstore_db'),
-        'USER': os.environ.get('DB_USER', 'postgres'),
-        'PASSWORD': os.environ.get('DB_PASSWORD', 'postgres'),
-        'HOST': os.environ.get('DB_HOST', 'db'),
-        'PORT': os.environ.get('DB_PORT', '5432'),
+        'NAME': env('DB_NAME', default='bookstore_db'),
+        'USER': env('DB_USER', default='postgres'),
+        'PASSWORD': env('DB_PASSWORD', default='postgres'),
+        'HOST': env('DB_HOST', default='db_a'),
+        'PORT': env('DB_PORT', default='5432'),
     }
 }
 
@@ -232,18 +235,20 @@ CART_SESSION_ID = 'cart'
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
+REDIS_BASE_URL = os.environ.get('REDIS_URL', 'redis://redis_a:6379/1').rsplit('/', 1)[0]
+
 CACHES = {
     "default": {
         "BACKEND": "django_redis.cache.RedisCache",
-        "LOCATION": "redis://redis:6379/1",
+        "LOCATION": os.environ.get("REDIS_URL", f"{REDIS_BASE_URL}/1"),
         "OPTIONS": {
             "CLIENT_CLASS": "django_redis.client.DefaultClient",
         }
     }
 }
 
-CELERY_BROKER_URL = 'redis://redis:6379/0'
-CELERY_RESULT_BACKEND = 'redis://redis:6379/0'
+CELERY_BROKER_URL = os.environ.get('CELERY_BROKER_URL', f'{REDIS_BASE_URL}/0')
+CELERY_RESULT_BACKEND = os.environ.get('CELERY_RESULT_BACKEND', f'{REDIS_BASE_URL}/0')
 CELERY_ACCEPT_CONTENT = ['json']
 CELERY_TASK_SERIALIZER = 'json'
 CELERY_TIMEZONE = 'Europe/Kyiv'
@@ -267,3 +272,13 @@ sentry_sdk.init(
     traces_sample_rate=1.0,
     send_default_pii=True,
 )
+
+import sys
+
+if "pytest" in sys.modules or "test" in sys.argv:
+    DATABASES = {
+        "default": {
+            "ENGINE": "django.db.backends.sqlite3",
+            "NAME": BASE_DIR / "test_db.sqlite3",
+        }
+    }
