@@ -37,3 +37,24 @@ flowchart LR
     WebA -- "HTTP резервування залишків\n(/api/warehouse/stock/.../reserve/)" --> WebB
     WebA -. "Помилки та трейси" .-> Sentry["Sentry"]
     WebB -. "Помилки та трейси" .-> Sentry
+
+@'
+
+---
+
+## API та документація (OpenAPI / Swagger)
+
+* **OpenAPI схема**: `/api/schema/` (`drf-spectacular`)
+* **Інтерактивна документація**: підключена через `drf-spectacular` (перевірте точні шляхи Swagger / Redoc у `bookstore/urls.py` та `warehouse_service/warehouse/urls.py`)
+* **Автентифікація**: JWT (`Bearer <access_token>`) або сесійна автентифікація залежно від ендпоінта
+
+---
+
+## Запуск проєкту
+
+### Через Docker Compose
+
+```powershell
+cd D:\Project\bookstore
+docker compose up -d --build
+docker compose ps
